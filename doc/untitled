@@ -1,0 +1,13 @@
+
+// Start a simulation and return a channel sending generation updates
+func (w *World) run() (chan []Delta, err error {
+	deltaChan := make(chan []Delta, 100)
+	worldChan := make(chan *World, 100)
+	go func() {
+		for {
+			world, deltas := world.Step()
+			deltaChan <- deltas // benchmark value vs pointers
+			worldChan <- &world
+		}
+	}()
+}

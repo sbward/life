@@ -1,0 +1,19 @@
+- Request X generations per second
+- Receive stream of generations via WebSocket
+
+Extra credit:
+
+- Send data as a compacted stream of deltas
+- Verify state with regular checksums
+- Resend whole state if checksum fails
+
+Program Architecture:
+
+- Concurrent processes:
+	- 1 per simulation
+	- 1 per client (WebSocket Conn)
+	- New client/sim pair generator (WebSocket server)
+	- HTTP server
+
+1:N Simulation:Clients
+

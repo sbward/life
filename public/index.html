@@ -1,0 +1,38 @@
+<html>
+<head>
+	<title>Life</title>
+	<link rel="stylesheet" type="text/css" href="/css/life.css">
+</head>
+<body>
+
+	<div id="page">
+
+		<div id="info">
+			<hgroup>
+				<h1>Conway's Game of Life</h1>
+				<h2>Using <a href="http://www.golang.org" title="The Go Programming Language">Go</a> and WebSocket</h2>
+			</hgroup>
+
+			<p>Intro text</p>
+
+			<div>
+				<input type="button" id="start" value="Start"/>
+			</div>
+
+			<footer>
+				<p>Written by <a href="http://ward.io">Sam Ward</a></p>
+			</footer>
+		</div>
+
+		<table id="world"></table>
+
+		<div class="log">
+			<textarea></textarea>
+		</div>
+
+	</div>
+
+	<script type="text/javascript" src="/js/jquery.min.js"></script>
+	<script type="text/javascript" src="/js/life.js"></script>
+</body>
+</html>

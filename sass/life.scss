@@ -1,0 +1,70 @@
+/* Life.sass */
+
+/** {
+	margin: 0;
+	padding: 0;
+	border-spacing: 0;
+	border-collapse: collapse;
+}*/
+
+body {
+	background-color: #DDD;
+	color: #aaa;
+	margin: 0;
+	padding: 10px;
+	font-family: sans-serif;
+}
+
+#page {
+	margin: 0 20px;
+	width: 900px;
+	margin: auto;
+}
+
+#world {
+	border: {
+		style: solid;
+		width: 1px;
+		color: #000;
+	}
+	box-shadow: 0 0 10px rgba(255,255,255,.5), inset 0 0 1px rgba(255,255,255,.8);
+	background-color: rgba(5,5,5,.95);
+	margin: auto;
+}
+
+#world td {
+	width: 7px;
+	height: 7px;
+	/*transition: all .1s ease-out;
+	-moz-transition: all .1s ease-out;
+	-webkit-transition: all .1s ease-out;*/
+}
+
+#world tr:nth-child(odd) td:nth-child(odd),
+#world tr:nth-child(even) td:nth-child(even) {
+	background: rgba(255,255,255,.02);
+}
+
+#world td.alive {
+	background: {
+		color: #eee !important;
+	}
+	box-shadow: 0 0 5px #eee;
+}
+
+#world td:not(.alive):hover {
+	background: {
+		color: rgba(255,255,255,.15) !important;
+	}
+	/*transition-timing-function: step-start;
+	-webkit-transition-timing-function: step-start;
+	-moz-transition-timing-function: step-start;*/
+}
+
+#info {
+	font-size: .85em;
+	margin: {
+		left: 25px;
+		right: 50px;
+	}
+}
