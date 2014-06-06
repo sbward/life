@@ -90,7 +90,7 @@ func (server *Server) httpHandler(w http.ResponseWriter, r *http.Request) {
 	server.Worlds = append(server.Worlds, world)
 	server.NumWorlds++
 
-	err = ws.WriteMessage(websocket.OpText, []byte("Welcome to game of shitty life, where nobody loves you!"))
+	err = ws.WriteMessage(websocket.OpText, []byte("Welcome to game of life!"))
 
 	// Start the session listener.
 	go server.ListenToClient(client)
